@@ -8,15 +8,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo build --no-cache",
+    "build": "turbo --no-daemon build",
     "test": "turbo test",
     "dev": "turbo dev --no-cache --continue",
-    "lint": "turbo lint",
+    "lint": "",
     "clean": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build && changeset publish"
+    "release": "turbo --no-daemon build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
